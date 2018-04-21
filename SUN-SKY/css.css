@@ -21,11 +21,12 @@ body {
   height: 200px;
   border-radius: 50%;
   transform: translate(-200px, 200px);
-  animation-name: sun;
+/*  animation-name: sun;
   animation-duration: 8s;
-  animation-delay: 0;
+  animation-delay: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear;*/
+  animation: sun 8s infinite 0s linear; /*animation shorthand, dura time must be before delay time*/
 }
 
 /*animation*/
