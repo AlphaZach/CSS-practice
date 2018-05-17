@@ -3,13 +3,69 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	margin: 0;
+	background: #2c3e50;
+	font-family: Helvetica;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 main {
   display: flex;
-  
+  flex-basis: 800px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 header, footer {
   background: pink;
+  flex-basis: 50px;
+}
+
+main > *, header, footer {
+	margin: 4px;
+	border-radius: 7px;
+	padding: 5px;
+}
+
+nav {
+  flex-basis: 20%;
+  order: -1;
+  background: yellow;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+article {
+	flex-basis: 60%;
+	background: orange;
+	flex-grow: 4;
+	flex-shrink: 0;
+}
+
+aside {
+	flex-basis: 20%;
+
+	background-color: red;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+@media all and (max-width: 640px){
+	main{
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	nav{
+		order: 0;
+	}
+	header, footer{
+		flex-basis: 50px;
+	}
 }
